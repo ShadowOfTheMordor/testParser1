@@ -1,9 +1,8 @@
 <?php
-namespace App;
 
 	class Base
 	{
-		//управляющий класс
+		//базовый управляющий класс
 		//соединяет с бд
 		
 		protected string $dbName="";
@@ -30,7 +29,7 @@ namespace App;
 			}
 			else
 			{
-				echo "успешно"."\n";
+//				echo "успешно"."\n";
 				$this->isConnected=true;
 				
 			}
@@ -45,4 +44,10 @@ namespace App;
 		{
 			return $this->isConnected;
 		}
+
+		public function getDatabase()
+		{
+			return $this->database;
+		}
+
 	}
